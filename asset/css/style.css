@@ -1,0 +1,393 @@
+
+/* BASES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white: #fff;
+    --vert: #4f805d;
+    --vertclair: #8bb092;
+}
+
+body{
+    background-color: #ddd;
+    font: 400 16px/1.5 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.wrap{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrap2{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrap3{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 10px 6px -6px var(--vertclair);
+    -moz-box-shadow: 0 10px 6px -6px var(--vertclair);
+    box-shadow: 0 10px 6px -6px var(--vertclair);
+}
+
+/* FIN DES BASES */
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+strong{
+    font-size: 1.6rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Astuce pour que tous les éléments soient bien en colonne */
+#container{
+    min-height: 100vh; /* évite une zone blanche en dessous du footer */
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+#header{
+    background-color: var(--vert);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .6rem;
+    align-items: center;
+}
+
+#header .logo{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.9rem;
+    transition: all .2s;
+}
+
+#header .logo:hover{
+    opacity: .8;
+}
+
+#header nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .6rem;
+}
+
+#header nav ul li a {
+    transition: all .2s;
+}
+
+#header nav ul li a:hover {
+    color: #000;
+}
+
+/* INTRO */
+
+#intro{
+    height: 100vh;
+    background: url("https://picsum.photos/id/38/1200/500") no-repeat center center/cover;
+    display: flex;
+}
+
+#intro > div{
+    max-width: 600px;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+    font-size: 1.4rem;
+}
+
+/* COMPONENT */
+
+#component{
+    margin: 6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#component .boxs{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#component h2{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.separator{
+    background-color: var(--vert);
+    margin: .5rem auto;
+    width: 25%;
+    height: 2px;
+}
+
+#component ul.boxs{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#component ul.boxs img{
+    width: 100%;
+}
+
+#component ul.boxs li{
+    background-color: #fff;
+    width: 31%;
+}
+
+#component ul.boxs li .bloc_text{
+    text-align: justify;
+    padding: 1rem;
+}
+
+#component .title{
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* LEARN */
+
+#learn{
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #ffffff;
+}
+
+#learn .learn_img{
+    width: 50%;
+}
+
+#learn .learn_img img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#learn .learn_logo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+#learn .learn_logo img{
+    width: 35%;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* PARTENAIRE */
+
+#partenaire{
+    margin: 3rem 0;
+}
+
+#partenaire img{
+    width: 100%;
+    margin-bottom: .6rem;
+}
+
+#partenaire .wrap{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#partenaire .shadow{
+    width: 23%;
+    background-color: #fff;
+}
+
+#partenaire i {
+    color: var(--vert);
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+/* TESTIMONIAL */
+
+#testimonial .wrap2{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#testimonial .testi_box{
+    background-color: #fff;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#testimonial .testi_box:nth-child(2n) {
+    flex-direction: row;
+}
+
+#testimonial .testi_box .testi__text{
+    margin: auto;
+    width: 70%;
+}
+
+#testimonial .testi_box .testi__text i{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#testimonial .testi_box .testi__user{
+    margin: auto;
+}
+
+#testimonial .testi_box .testi__user img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+}
+
+#testimonial .testi__user{
+    padding: 1rem;
+}
+
+#testimonial .testi__user .text_job{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* CONTACT */
+
+#contact{
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+#contact h2{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+#contact input, #contact textarea{
+    width: 100%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+}
+
+#contact textarea{
+    resize: none;
+    min-height: 100px;
+}
+
+#contact input[type=submit]{
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#contact input[type=submit]:hover {
+    background-color: var(--vertclair);
+    color: #ffffff;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--vert);
+    color: #ffffff;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-credits{
+    font-size: .8rem;
+}
+
+footer .footer-links{
+    font-size: 2.5rem;
+}
+
+footer a i{
+    transition: all .3s;
+}
+
+footer a:hover i{
+    color: black;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 980px) {
+    #partenaire .wrap{
+        flex-flow: row wrap;
+    }
+    #partenaire .shadow{
+        width: 48%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    #partenaire .shadow{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    footer{
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer nav{
+        margin-bottom: 1rem;
+    }
+}
